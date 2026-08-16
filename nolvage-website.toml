@@ -1,0 +1,4 @@
+baseURL = 'https://nolvage.com'
+languageCode = 'ja'
+title = 'NOLVAGE | アウトドアブランド'
+theme = 'PaperMod'
