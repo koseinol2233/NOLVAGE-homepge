@@ -9,122 +9,432 @@
 		<title>NOLVAGE</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- NOLVAGE Original Style -->
+		<style>
+
+			/* =========================
+			   NOLVAGE BRAND COLORS
+			   ========================= */
+
+			:root {
+				--nolvage-green: #0b4035;
+				--nolvage-green-dark: #072f28;
+				--nolvage-ivory: #f2efe6;
+				--nolvage-gold: #a89261;
+				--nolvage-text: #242824;
+			}
+
+
+			/* =========================
+			   BODY / BACKGROUND
+			   ========================= */
+
+			body {
+				background-color: var(--nolvage-green-dark);
+			}
+
+			#wrapper {
+				background-color: var(--nolvage-green-dark);
+			}
+
+
+			/* =========================
+			   INTRO
+			   ========================= */
+
+			#intro h1 {
+				color: var(--nolvage-ivory);
+				letter-spacing: 0.12em;
+			}
+
+			#intro p {
+				color: var(--nolvage-ivory);
+				font-size: 1.1rem;
+				letter-spacing: 0.15em;
+			}
+
+			#intro .button {
+				border-color: var(--nolvage-gold) !important;
+				color: var(--nolvage-gold) !important;
+			}
+
+
+			/* =========================
+			   HEADER
+			   ========================= */
+
+			#header .logo {
+				border-color: var(--nolvage-gold);
+				color: var(--nolvage-ivory) !important;
+				letter-spacing: 0.18em;
+			}
+
+
+			/* =========================
+			   NAVIGATION
+			   ========================= */
+
+			#nav {
+				background: var(--nolvage-green);
+			}
+
+			#nav ul.links li a {
+				color: var(--nolvage-ivory);
+			}
+
+			#nav ul.links li.active {
+				background: var(--nolvage-ivory);
+			}
+
+			#nav ul.links li.active a {
+				color: var(--nolvage-green);
+			}
+
+			#nav ul.icons li a {
+				color: var(--nolvage-ivory);
+			}
+
+
+			/* =========================
+			   MAIN
+			   ========================= */
+
+			#main {
+				background: var(--nolvage-ivory);
+				color: var(--nolvage-text);
+			}
+
+			#main h1,
+			#main h2,
+			#main h3 {
+				color: var(--nolvage-green-dark);
+			}
+
+
+			/* =========================
+			   BRAND CONCEPT
+			   ========================= */
+
+			.post.featured {
+				padding-top: 6rem;
+				padding-bottom: 6rem;
+			}
+
+			.post.featured .major .date {
+				color: var(--nolvage-gold);
+				letter-spacing: 0.25em;
+				font-weight: bold;
+			}
+
+			.post.featured h2 {
+				letter-spacing: 0.08em;
+				margin-top: 1.5rem;
+			}
+
+			.post.featured p {
+				line-height: 2.2;
+			}
+
+
+			/* =========================
+			   PRODUCT CARDS
+			   ========================= */
+
+			.posts article {
+				background: #ebe7dc;
+				padding-top: 4rem;
+				padding-bottom: 4rem;
+			}
+
+			.posts article .date {
+				color: var(--nolvage-gold);
+				letter-spacing: 0.2em;
+				font-weight: bold;
+			}
+
+			.posts article h2 {
+				letter-spacing: 0.06em;
+			}
+
+			.posts article p {
+				line-height: 2;
+			}
+
+			.posts article img {
+				transition: transform 0.6s ease;
+			}
+
+			.posts article .image:hover img {
+				transform: scale(1.025);
+			}
+
+
+			/* =========================
+			   BUTTON
+			   ========================= */
+
+			.button,
+			input[type="submit"] {
+				border-color: var(--nolvage-gold) !important;
+				color: var(--nolvage-green-dark) !important;
+				letter-spacing: 0.15em;
+			}
+
+			.button:hover,
+			input[type="submit"]:hover {
+				background-color: var(--nolvage-gold) !important;
+				color: var(--nolvage-ivory) !important;
+			}
+
+
+			/* =========================
+			   CONTACT
+			   ========================= */
+
+			#footer {
+				background: var(--nolvage-green);
+				color: var(--nolvage-ivory);
+			}
+
+			#footer h2,
+			#footer h3 {
+				color: var(--nolvage-gold);
+			}
+
+			#footer a {
+				color: var(--nolvage-ivory);
+			}
+
+			#footer p {
+				color: var(--nolvage-ivory);
+			}
+
+
+			/* =========================
+			   COPYRIGHT
+			   ========================= */
+
+			#copyright {
+				color: rgba(242, 239, 230, 0.65);
+			}
+
+			#copyright a {
+				color: rgba(242, 239, 230, 0.65);
+			}
+
+
+			/* =========================
+			   MOBILE
+			   ========================= */
+
+			@media screen and (max-width: 736px) {
+
+				#intro h1 {
+					font-size: 3rem;
+				}
+
+				#intro p {
+					font-size: 0.9rem;
+				}
+
+				.post.featured {
+					padding-top: 4rem;
+					padding-bottom: 4rem;
+				}
+
+			}
+
+		</style>
+
 	</head>
+
 
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 		<div id="wrapper" class="fade-in">
 
+
 			<!-- Intro -->
 			<div id="intro">
+
 				<h1>NOLVAGE</h1>
-				<p>荒々しさの中に、気高さを。</p>
+
+				<p>
+					荒々しさの中に、気高さを。
+				</p>
 
 				<ul class="actions">
+
 					<li>
-						<a href="#header" class="button icon solid solo fa-arrow-down scrolly">
+						<a
+							href="#header"
+							class="button icon solid solo fa-arrow-down scrolly"
+						>
 							Continue
 						</a>
 					</li>
+
 				</ul>
+
 			</div>
+
 
 			<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="logo">NOLVAGE</a>
+
+				<a href="index.html" class="logo">
+					NOLVAGE
+				</a>
+
 			</header>
+
 
 			<!-- Navigation -->
 			<nav id="nav">
 
 				<ul class="links">
+
 					<li class="active">
-						<a href="index.html">NOLVAGE</a>
-					</li>
-
-					<li>
-						<a href="#concept">CONCEPT</a>
-					</li>
-
-					<li>
-						<a href="#products">PRODUCTS</a>
-					</li>
-
-					<li>
-						<a href="#contact">CONTACT</a>
-					</li>
-				</ul>
-
-				<ul class="icons">
-					<li>
-						<a href="#" class="icon brands fa-instagram">
-							<span class="label">Instagram</span>
+						<a href="index.html">
+							NOLVAGE
 						</a>
 					</li>
+
+					<li>
+						<a href="#concept">
+							CONCEPT
+						</a>
+					</li>
+
+					<li>
+						<a href="#products">
+							PRODUCTS
+						</a>
+					</li>
+
+					<li>
+						<a href="#contact">
+							CONTACT
+						</a>
+					</li>
+
+				</ul>
+
+
+				<ul class="icons">
+
+					<li>
+						<a
+							href="#"
+							class="icon brands fa-instagram"
+						>
+							<span class="label">
+								Instagram
+							</span>
+						</a>
+					</li>
+
 				</ul>
 
 			</nav>
 
+
 			<!-- Main -->
 			<div id="main">
 
+
 				<!-- Brand Concept -->
-				<article class="post featured" id="concept">
+				<article
+					class="post featured"
+					id="concept"
+				>
 
 					<header class="major">
 
-						<span class="date">BRAND CONCEPT</span>
+						<span class="date">
+							BRAND CONCEPT
+						</span>
+
 
 						<h2>
 							荒々しさの中に、<br />
 							気高さを。
 						</h2>
 
+
 						<p>
+
 							NOLVAGEが提案するのは、<br />
 							自然をねじ伏せ、遮断するための道具ではなく、<br />
-							自然を味わい尽くすための、最低限の装備です。<br /><br />
+							自然を味わい尽くすための、最低限の装備です。
+
+							<br /><br />
 
 							便利さに満たされた日常から少し離れ、<br />
-							荒々しい自然の中へ。<br /><br />
+							荒々しい自然の中へ。
+
+							<br /><br />
 
 							そこで感じる不便さも、静けさも、厳しさも、<br />
-							すべてを愉しむために。<br /><br />
+							すべてを愉しむために。
+
+							<br /><br />
 
 							その自然の中に、<br />
-							静かなる気高さを付与する存在でありたい。<br /><br />
+							静かなる気高さを付与する存在でありたい。
+
+							<br /><br />
 
 							NOLVAGEは、そんな思いから生まれた<br />
 							日本発のアウトドアブランドです。
+
 						</p>
 
 					</header>
 
+
 					<div class="image main">
-						<img src="images/pic01.jpg" alt="NOLVAGE Brand Concept" />
+
+						<img
+							src="images/pic01.jpg"
+							alt="NOLVAGE Brand Concept"
+						/>
+
 					</div>
 
 				</article>
 
 
 				<!-- Products -->
-				<section class="posts" id="products">
+				<section
+					class="posts"
+					id="products"
+				>
+
 
 					<!-- BRIGHT -->
 					<article>
 
 						<header>
-							<span class="date">AVAILABLE NOW</span>
+
+							<span class="date">
+								AVAILABLE NOW
+							</span>
+
 
 							<h2>
 								NOLVAGE<br />
 								STAINLESS MUG 400<br />
 								BRIGHT
 							</h2>
+
 						</header>
+
 
 						<a
 							href="https://amzn.asia/d/06VGyoM7"
@@ -132,23 +442,33 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
+
 							<img
 								src="images/nolvage-mug-bright.jpg"
 								alt="NOLVAGE Stainless Mug 400 Bright"
 							/>
+
 						</a>
 
+
 						<p>
-							ステンレス本来の素材感を活かしたBRIGHT仕上げ。<br /><br />
+
+							ステンレス本来の素材感を活かしたBRIGHT仕上げ。
+
+							<br /><br />
 
 							華美な装飾を削ぎ落とし、
 							道具としての無骨さと、
 							金属そのものが持つ美しさを引き出した
 							ステンレスマグです。
+
 						</p>
 
+
 						<ul class="actions special">
+
 							<li>
+
 								<a
 									href="https://amzn.asia/d/06VGyoM7"
 									class="button"
@@ -157,24 +477,33 @@
 								>
 									BUY ON AMAZON
 								</a>
+
 							</li>
+
 						</ul>
 
 					</article>
+
 
 
 					<!-- MATTE -->
 					<article>
 
 						<header>
-							<span class="date">AVAILABLE NOW</span>
+
+							<span class="date">
+								AVAILABLE NOW
+							</span>
+
 
 							<h2>
 								NOLVAGE<br />
 								STAINLESS MUG 400<br />
 								MATTE
 							</h2>
+
 						</header>
+
 
 						<a
 							href="https://amzn.asia/d/0hT14gxe"
@@ -182,23 +511,35 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
+
 							<img
 								src="images/nolvage-mug-matte.jpg"
 								alt="NOLVAGE Stainless Mug 400 Matte"
 							/>
+
 						</a>
 
+
 						<p>
-							光沢を抑えた、落ち着きのあるMATTE仕上げ。<br /><br />
+
+							光沢を抑えた、
+							落ち着きのあるMATTE仕上げ。
+
+							<br /><br />
 
 							荒々しい自然の中に溶け込む、
 							静かで無骨な佇まい。
+
 							NOLVAGEの世界観をより色濃く表現した
 							ステンレスマグです。
+
 						</p>
 
+
 						<ul class="actions special">
+
 							<li>
+
 								<a
 									href="https://amzn.asia/d/0hT14gxe"
 									class="button"
@@ -207,12 +548,16 @@
 								>
 									BUY ON AMAZON
 								</a>
+
 							</li>
+
 						</ul>
 
 					</article>
 
+
 				</section>
+
 
 
 				<!-- Coming Soon -->
@@ -220,94 +565,144 @@
 
 					<header class="major">
 
-						<span class="date">COMING SOON</span>
+						<span class="date">
+							COMING SOON
+						</span>
+
 
 						<h2>
 							NEXT PRODUCT
 						</h2>
 
+
 						<p>
+
 							自然を味わい尽くすための、<br />
-							新たな道具を開発しています。<br /><br />
+							新たな道具を開発しています。
+
+							<br /><br />
 
 							詳細は近日公開予定。
+
 						</p>
 
 					</header>
 
 				</article>
 
+
 			</div>
 
 
-			<!-- Footer / Contact -->
+
+			<!-- Footer -->
 			<footer id="footer">
+
 
 				<section id="contact">
 
 					<header>
-						<h2>CONTACT</h2>
+
+						<h2>
+							CONTACT
+						</h2>
+
 					</header>
 
+
 					<p>
+
 						商品・取材・お取引などのお問い合わせは、<br />
 						下記メールアドレスよりお願いいたします。
+
 					</p>
 
 				</section>
 
+
+
 				<section class="split contact">
+
 
 					<section>
 
-						<h3>Email</h3>
+						<h3>
+							Email
+						</h3>
 
 						<p>
+
 							<a href="mailto:info@nolvage.jp">
 								info@nolvage.jp
 							</a>
+
 						</p>
 
 					</section>
 
+
+
 					<section>
 
-						<h3>Social</h3>
+						<h3>
+							Social
+						</h3>
+
 
 						<ul class="icons alt">
 
 							<li>
-								<a href="#" class="icon brands alt fa-instagram">
-									<span class="label">Instagram</span>
+
+								<a
+									href="#"
+									class="icon brands alt fa-instagram"
+								>
+
+									<span class="label">
+										Instagram
+									</span>
+
 								</a>
+
 							</li>
 
 						</ul>
 
 					</section>
 
+
 				</section>
 
+
 			</footer>
+
 
 
 			<!-- Copyright -->
 			<div id="copyright">
 
 				<ul>
-					<li>&copy; NOLVAGE</li>
 
 					<li>
+						&copy; NOLVAGE
+					</li>
+
+					<li>
+
 						Design:
 						<a href="https://html5up.net">
 							HTML5 UP
 						</a>
+
 					</li>
+
 				</ul>
 
 			</div>
 
+
 		</div>
+
 
 
 		<!-- Scripts -->
@@ -319,5 +714,7 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 
+
 	</body>
+
 </html>
