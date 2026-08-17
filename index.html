@@ -13,12 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- NOLVAGE Original Style -->
 		<style>
-
-			/* =========================
-			   NOLVAGE BRAND COLORS
-			   ========================= */
 
 			:root {
 				--nolvage-green: #0b4035;
@@ -28,10 +23,9 @@
 				--nolvage-text: #242824;
 			}
 
-
-			/* =========================
-			   BODY / BACKGROUND
-			   ========================= */
+			html {
+				scroll-behavior: smooth;
+			}
 
 			body {
 				background-color: var(--nolvage-green-dark);
@@ -41,43 +35,59 @@
 				background-color: var(--nolvage-green-dark);
 			}
 
+			/* HERO */
+			#intro {
+				position: relative;
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
 
-			/* =========================
-			   INTRO
-			   ========================= */
+				background:
+					linear-gradient(
+						rgba(5, 18, 15, 0.48),
+						rgba(5, 18, 15, 0.68)
+					),
+					url("images/nolvage-hero2.jpg") center center / cover no-repeat;
+
+				padding: 3rem 1.5rem;
+			}
 
 			#intro h1 {
 				color: var(--nolvage-ivory);
-				letter-spacing: 0.12em;
+				font-size: 6rem;
+				letter-spacing: 0.16em;
+				margin: 0;
+				text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
 			}
 
 			#intro p {
 				color: var(--nolvage-ivory);
-				font-size: 1.1rem;
-				letter-spacing: 0.15em;
+				font-size: 1.15rem;
+				letter-spacing: 0.22em;
+				margin-top: 1.5rem;
+				text-shadow: 0 3px 18px rgba(0, 0, 0, 0.45);
+			}
+
+			#intro .actions {
+				margin-top: 3rem;
 			}
 
 			#intro .button {
 				border-color: var(--nolvage-gold) !important;
-				color: var(--nolvage-gold) !important;
+				color: var(--nolvage-ivory) !important;
 			}
 
-
-			/* =========================
-			   HEADER
-			   ========================= */
-
+			/* HEADER */
 			#header .logo {
 				border-color: var(--nolvage-gold);
 				color: var(--nolvage-ivory) !important;
 				letter-spacing: 0.18em;
 			}
 
-
-			/* =========================
-			   NAVIGATION
-			   ========================= */
-
+			/* NAVIGATION */
 			#nav {
 				background: var(--nolvage-green);
 			}
@@ -98,11 +108,7 @@
 				color: var(--nolvage-ivory);
 			}
 
-
-			/* =========================
-			   MAIN
-			   ========================= */
-
+			/* MAIN */
 			#main {
 				background: var(--nolvage-ivory);
 				color: var(--nolvage-text);
@@ -114,11 +120,7 @@
 				color: var(--nolvage-green-dark);
 			}
 
-
-			/* =========================
-			   BRAND CONCEPT
-			   ========================= */
-
+			/* FEATURED */
 			.post.featured {
 				padding-top: 6rem;
 				padding-bottom: 6rem;
@@ -139,11 +141,7 @@
 				line-height: 2.2;
 			}
 
-
-			/* =========================
-			   PRODUCT CARDS
-			   ========================= */
-
+			/* PRODUCTS */
 			.posts article {
 				background: #ebe7dc;
 				padding-top: 4rem;
@@ -172,11 +170,7 @@
 				transform: scale(1.025);
 			}
 
-
-			/* =========================
-			   BUTTON
-			   ========================= */
-
+			/* BUTTONS */
 			.button,
 			input[type="submit"] {
 				border-color: var(--nolvage-gold) !important;
@@ -190,11 +184,7 @@
 				color: var(--nolvage-ivory) !important;
 			}
 
-
-			/* =========================
-			   CONTACT
-			   ========================= */
-
+			/* FOOTER */
 			#footer {
 				background: var(--nolvage-green);
 				color: var(--nolvage-ivory);
@@ -205,19 +195,12 @@
 				color: var(--nolvage-gold);
 			}
 
-			#footer a {
-				color: var(--nolvage-ivory);
-			}
-
+			#footer a,
 			#footer p {
 				color: var(--nolvage-ivory);
 			}
 
-
-			/* =========================
-			   COPYRIGHT
-			   ========================= */
-
+			/* COPYRIGHT */
 			#copyright {
 				color: rgba(242, 239, 230, 0.65);
 			}
@@ -226,133 +209,91 @@
 				color: rgba(242, 239, 230, 0.65);
 			}
 
-
-			/* =========================
-			   MOBILE
-			   ========================= */
-
+			/* MOBILE */
 			@media screen and (max-width: 736px) {
+
+				#intro {
+					min-height: 90vh;
+				}
 
 				#intro h1 {
 					font-size: 3rem;
+					letter-spacing: 0.12em;
 				}
 
 				#intro p {
-					font-size: 0.9rem;
+					font-size: 0.85rem;
+					letter-spacing: 0.12em;
 				}
 
 				.post.featured {
 					padding-top: 4rem;
 					padding-bottom: 4rem;
 				}
-
 			}
 
 		</style>
-
 	</head>
-
 
 	<body class="is-preload">
 
-		<!-- Wrapper -->
 		<div id="wrapper" class="fade-in">
 
-
-			<!-- Intro -->
+			<!-- HERO -->
 			<div id="intro">
-
 				<h1>NOLVAGE</h1>
-
-				<p>
-					荒々しさの中に、気高さを。
-				</p>
+				<p>荒々しさの中に、気高さを。</p>
 
 				<ul class="actions">
-
 					<li>
-						<a
-							href="#header"
-							class="button icon solid solo fa-arrow-down scrolly"
-						>
+						<a href="#header" class="button icon solid solo fa-arrow-down scrolly">
 							Continue
 						</a>
 					</li>
-
 				</ul>
-
 			</div>
 
-
-			<!-- Header -->
+			<!-- HEADER -->
 			<header id="header">
-
-				<a href="index.html" class="logo">
-					NOLVAGE
-				</a>
-
+				<a href="index.html" class="logo">NOLVAGE</a>
 			</header>
 
-
-			<!-- Navigation -->
+			<!-- NAVIGATION -->
 			<nav id="nav">
 
 				<ul class="links">
-
 					<li class="active">
-						<a href="index.html">
-							NOLVAGE
-						</a>
+						<a href="index.html">NOLVAGE</a>
 					</li>
 
 					<li>
-						<a href="#concept">
-							CONCEPT
-						</a>
+						<a href="#concept">CONCEPT</a>
 					</li>
 
 					<li>
-						<a href="#products">
-							PRODUCTS
-						</a>
+						<a href="#products">PRODUCTS</a>
 					</li>
 
 					<li>
-						<a href="#contact">
-							CONTACT
-						</a>
+						<a href="#contact">CONTACT</a>
 					</li>
-
 				</ul>
 
-
 				<ul class="icons">
-
 					<li>
-						<a
-							href="#"
-							class="icon brands fa-instagram"
-						>
-							<span class="label">
-								Instagram
-							</span>
+						<a href="#" class="icon brands fa-instagram">
+							<span class="label">Instagram</span>
 						</a>
 					</li>
-
 				</ul>
 
 			</nav>
 
-
-			<!-- Main -->
+			<!-- MAIN -->
 			<div id="main">
 
-
-				<!-- Brand Concept -->
-				<article
-					class="post featured"
-					id="concept"
-				>
+				<!-- BRAND CONCEPT -->
+				<article class="post featured" id="concept">
 
 					<header class="major">
 
@@ -360,62 +301,46 @@
 							BRAND CONCEPT
 						</span>
 
-
 						<h2>
 							荒々しさの中に、<br />
 							気高さを。
 						</h2>
 
-
 						<p>
-
 							NOLVAGEが提案するのは、<br />
 							自然をねじ伏せ、遮断するための道具ではなく、<br />
 							自然を味わい尽くすための、最低限の装備です。
-
 							<br /><br />
 
 							便利さに満たされた日常から少し離れ、<br />
 							荒々しい自然の中へ。
-
 							<br /><br />
 
 							そこで感じる不便さも、静けさも、厳しさも、<br />
 							すべてを愉しむために。
-
 							<br /><br />
 
 							その自然の中に、<br />
 							静かなる気高さを付与する存在でありたい。
-
 							<br /><br />
 
 							NOLVAGEは、そんな思いから生まれた<br />
 							日本発のアウトドアブランドです。
-
 						</p>
 
 					</header>
 
-
 					<div class="image main">
-
 						<img
 							src="images/pic01.jpg"
 							alt="NOLVAGE Brand Concept"
 						/>
-
 					</div>
 
 				</article>
 
-
-				<!-- Products -->
-				<section
-					class="posts"
-					id="products"
-				>
-
+				<!-- PRODUCTS -->
+				<section class="posts" id="products">
 
 					<!-- BRIGHT -->
 					<article>
@@ -426,7 +351,6 @@
 								AVAILABLE NOW
 							</span>
 
-
 							<h2>
 								NOLVAGE<br />
 								STAINLESS MUG 400<br />
@@ -434,7 +358,6 @@
 							</h2>
 
 						</header>
-
 
 						<a
 							href="https://amzn.asia/d/06VGyoM7"
@@ -450,25 +373,19 @@
 
 						</a>
 
-
 						<p>
-
 							ステンレス本来の素材感を活かしたBRIGHT仕上げ。
-
 							<br /><br />
 
 							華美な装飾を削ぎ落とし、
 							道具としての無骨さと、
 							金属そのものが持つ美しさを引き出した
 							ステンレスマグです。
-
 						</p>
-
 
 						<ul class="actions special">
 
 							<li>
-
 								<a
 									href="https://amzn.asia/d/06VGyoM7"
 									class="button"
@@ -477,14 +394,11 @@
 								>
 									BUY ON AMAZON
 								</a>
-
 							</li>
 
 						</ul>
 
 					</article>
-
-
 
 					<!-- MATTE -->
 					<article>
@@ -495,7 +409,6 @@
 								AVAILABLE NOW
 							</span>
 
-
 							<h2>
 								NOLVAGE<br />
 								STAINLESS MUG 400<br />
@@ -503,7 +416,6 @@
 							</h2>
 
 						</header>
-
 
 						<a
 							href="https://amzn.asia/d/0hT14gxe"
@@ -519,27 +431,19 @@
 
 						</a>
 
-
 						<p>
-
-							光沢を抑えた、
-							落ち着きのあるMATTE仕上げ。
-
+							光沢を抑えた、落ち着きのあるMATTE仕上げ。
 							<br /><br />
 
 							荒々しい自然の中に溶け込む、
 							静かで無骨な佇まい。
-
 							NOLVAGEの世界観をより色濃く表現した
 							ステンレスマグです。
-
 						</p>
-
 
 						<ul class="actions special">
 
 							<li>
-
 								<a
 									href="https://amzn.asia/d/0hT14gxe"
 									class="button"
@@ -548,19 +452,15 @@
 								>
 									BUY ON AMAZON
 								</a>
-
 							</li>
 
 						</ul>
 
 					</article>
 
-
 				</section>
 
-
-
-				<!-- Coming Soon -->
+				<!-- COMING SOON -->
 				<article class="post featured">
 
 					<header class="major">
@@ -569,116 +469,80 @@
 							COMING SOON
 						</span>
 
-
 						<h2>
 							NEXT PRODUCT
 						</h2>
 
-
 						<p>
-
 							自然を味わい尽くすための、<br />
 							新たな道具を開発しています。
-
 							<br /><br />
 
 							詳細は近日公開予定。
-
 						</p>
 
 					</header>
 
 				</article>
 
-
 			</div>
 
-
-
-			<!-- Footer -->
+			<!-- FOOTER -->
 			<footer id="footer">
-
 
 				<section id="contact">
 
 					<header>
-
-						<h2>
-							CONTACT
-						</h2>
-
+						<h2>CONTACT</h2>
 					</header>
 
-
 					<p>
-
 						商品・取材・お取引などのお問い合わせは、<br />
 						下記メールアドレスよりお願いいたします。
-
 					</p>
 
 				</section>
 
-
-
 				<section class="split contact">
-
 
 					<section>
 
-						<h3>
-							Email
-						</h3>
+						<h3>Email</h3>
 
 						<p>
-
 							<a href="mailto:info@nolvage.jp">
 								info@nolvage.jp
 							</a>
-
 						</p>
 
 					</section>
 
-
-
 					<section>
 
-						<h3>
-							Social
-						</h3>
-
+						<h3>Social</h3>
 
 						<ul class="icons alt">
 
 							<li>
-
 								<a
 									href="#"
 									class="icon brands alt fa-instagram"
 								>
-
 									<span class="label">
 										Instagram
 									</span>
-
 								</a>
-
 							</li>
 
 						</ul>
 
 					</section>
 
-
 				</section>
-
 
 			</footer>
 
-
-
-			<!-- Copyright -->
+			<!-- COPYRIGHT -->
 			<div id="copyright">
 
 				<ul>
@@ -688,24 +552,19 @@
 					</li>
 
 					<li>
-
 						Design:
 						<a href="https://html5up.net">
 							HTML5 UP
 						</a>
-
 					</li>
 
 				</ul>
 
 			</div>
 
-
 		</div>
 
-
-
-		<!-- Scripts -->
+		<!-- SCRIPTS -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -714,7 +573,5 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 
-
 	</body>
-
 </html>
