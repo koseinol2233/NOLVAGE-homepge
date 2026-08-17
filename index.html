@@ -13,6 +13,11 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Hannari&display=swap" rel="stylesheet">
+
 		<style>
 
 			:root {
@@ -29,10 +34,25 @@
 
 			body {
 				background-color: var(--nolvage-green-dark);
+				font-family: "Hannari", serif;
+				font-style: normal;
 			}
 
 			#wrapper {
 				background-color: var(--nolvage-green-dark);
+			}
+
+			/* 英語・ロゴ */
+			#intro h1,
+			#header .logo,
+			#nav,
+			.date,
+			.product-title,
+			.english,
+			.button,
+			#copyright {
+				font-family: "Cormorant Garamond", serif;
+				font-style: normal;
 			}
 
 			/* HERO */
@@ -61,14 +81,17 @@
 				letter-spacing: 0.16em;
 				margin: 0;
 				text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+				font-weight: 600;
 			}
 
 			#intro p {
 				color: var(--nolvage-ivory);
-				font-size: 1.15rem;
-				letter-spacing: 0.22em;
+				font-size: 1.1rem;
+				letter-spacing: 0.12em;
 				margin-top: 1.5rem;
 				text-shadow: 0 3px 18px rgba(0, 0, 0, 0.45);
+				font-family: "Hannari", serif;
+				font-style: normal;
 			}
 
 			#intro .actions {
@@ -85,6 +108,7 @@
 				border-color: var(--nolvage-gold);
 				color: var(--nolvage-ivory) !important;
 				letter-spacing: 0.18em;
+				font-weight: 600;
 			}
 
 			/* NAVIGATION */
@@ -94,6 +118,7 @@
 
 			#nav ul.links li a {
 				color: var(--nolvage-ivory);
+				font-style: normal;
 			}
 
 			#nav ul.links li.active {
@@ -118,6 +143,13 @@
 			#main h2,
 			#main h3 {
 				color: var(--nolvage-green-dark);
+				font-style: normal;
+			}
+
+			/* 日本語見出し */
+			.japanese-heading {
+				font-family: "Hannari", serif;
+				font-style: normal;
 			}
 
 			/* FEATURED */
@@ -129,7 +161,7 @@
 			.post.featured .major .date {
 				color: var(--nolvage-gold);
 				letter-spacing: 0.25em;
-				font-weight: bold;
+				font-weight: 600;
 			}
 
 			.post.featured h2 {
@@ -139,6 +171,7 @@
 
 			.post.featured p {
 				line-height: 2.2;
+				font-family: "Hannari", serif;
 			}
 
 			/* PRODUCTS */
@@ -151,7 +184,7 @@
 			.posts article .date {
 				color: var(--nolvage-gold);
 				letter-spacing: 0.2em;
-				font-weight: bold;
+				font-weight: 600;
 			}
 
 			.posts article h2 {
@@ -160,6 +193,7 @@
 
 			.posts article p {
 				line-height: 2;
+				font-family: "Hannari", serif;
 			}
 
 			.posts article img {
@@ -170,12 +204,65 @@
 				transform: scale(1.025);
 			}
 
+			/* MG-24 */
+			.mg24-section {
+				background: var(--nolvage-green-dark);
+				color: var(--nolvage-ivory);
+				padding: 6rem 4rem;
+				text-align: center;
+			}
+
+			.mg24-section .date {
+				color: var(--nolvage-gold);
+				letter-spacing: 0.25em;
+				font-size: 1rem;
+				font-weight: 600;
+			}
+
+			.mg24-section h2 {
+				color: var(--nolvage-ivory) !important;
+				font-family: "Cormorant Garamond", serif;
+				font-size: 3.5rem;
+				letter-spacing: 0.12em;
+				margin: 1.5rem 0 0.5rem;
+				font-style: normal;
+			}
+
+			.mg24-section .subtitle {
+				font-family: "Cormorant Garamond", serif;
+				color: var(--nolvage-gold);
+				font-size: 1.4rem;
+				letter-spacing: 0.15em;
+				margin-bottom: 2.5rem;
+				font-style: normal;
+			}
+
+			.mg24-section p {
+				font-family: "Hannari", serif;
+				color: var(--nolvage-ivory);
+				line-height: 2.2;
+				font-size: 1.05rem;
+				margin-top: 2.5rem;
+			}
+
+			.mg24-section .image {
+				max-width: 900px;
+				margin: 0 auto;
+				display: block;
+			}
+
+			.mg24-section .image img {
+				width: 100%;
+				display: block;
+			}
+
 			/* BUTTONS */
 			.button,
 			input[type="submit"] {
 				border-color: var(--nolvage-gold) !important;
 				color: var(--nolvage-green-dark) !important;
 				letter-spacing: 0.15em;
+				font-style: normal;
 			}
 
 			.button:hover,
@@ -193,11 +280,24 @@
 			#footer h2,
 			#footer h3 {
 				color: var(--nolvage-gold);
+				font-style: normal;
+			}
+
+			#footer h2 {
+				font-family: "Cormorant Garamond", serif;
+			}
+
+			#footer h3 {
+				font-family: "Cormorant Garamond", serif;
 			}
 
 			#footer a,
 			#footer p {
 				color: var(--nolvage-ivory);
+			}
+
+			#footer p {
+				font-family: "Hannari", serif;
 			}
 
 			/* COPYRIGHT */
@@ -223,12 +323,24 @@
 
 				#intro p {
 					font-size: 0.85rem;
-					letter-spacing: 0.12em;
+					letter-spacing: 0.08em;
 				}
 
 				.post.featured {
 					padding-top: 4rem;
 					padding-bottom: 4rem;
+				}
+
+				.mg24-section {
+					padding: 4rem 1.5rem;
+				}
+
+				.mg24-section h2 {
+					font-size: 2.7rem;
+				}
+
+				.mg24-section .subtitle {
+					font-size: 1.1rem;
 				}
 			}
 
@@ -275,6 +387,10 @@
 					</li>
 
 					<li>
+						<a href="#mg24">MG-24</a>
+					</li>
+
+					<li>
 						<a href="#contact">CONTACT</a>
 					</li>
 				</ul>
@@ -301,7 +417,7 @@
 							BRAND CONCEPT
 						</span>
 
-						<h2>
+						<h2 class="japanese-heading">
 							荒々しさの中に、<br />
 							気高さを。
 						</h2>
@@ -351,7 +467,7 @@
 								AVAILABLE NOW
 							</span>
 
-							<h2>
+							<h2 class="product-title">
 								NOLVAGE<br />
 								STAINLESS MUG 400<br />
 								BRIGHT
@@ -365,12 +481,10 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-
 							<img
 								src="images/nolvage-mug-bright.jpg"
 								alt="NOLVAGE Stainless Mug 400 Bright"
 							/>
-
 						</a>
 
 						<p>
@@ -409,7 +523,7 @@
 								AVAILABLE NOW
 							</span>
 
-							<h2>
+							<h2 class="product-title">
 								NOLVAGE<br />
 								STAINLESS MUG 400<br />
 								MATTE
@@ -423,12 +537,10 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-
 							<img
 								src="images/nolvage-mug-matte.jpg"
 								alt="NOLVAGE Stainless Mug 400 Matte"
 							/>
-
 						</a>
 
 						<p>
@@ -460,30 +572,35 @@
 
 				</section>
 
-				<!-- COMING SOON -->
-				<article class="post featured">
+				<!-- MG-24 -->
+				<section class="mg24-section" id="mg24">
 
-					<header class="major">
+					<span class="date">
+						COMING SOON
+					</span>
 
-						<span class="date">
-							COMING SOON
-						</span>
+					<h2>
+						MG-24
+					</h2>
 
-						<h2>
-							NEXT PRODUCT
-						</h2>
+					<div class="subtitle">
+						FOLDING KNIFE
+					</div>
 
-						<p>
-							自然を味わい尽くすための、<br />
-							新たな道具を開発しています。
-							<br /><br />
+					<div class="image">
+						<img
+							src="images/mg-24-urbancamo.jpg"
+							alt="NOLVAGE MG-24 Folding Knife"
+						/>
+					</div>
 
-							詳細は近日公開予定。
-						</p>
+					<p>
+						キャンプからサバイバルまで。<br />
+						これ一本で過酷な環境を生き抜く、<br />
+						ファイヤースターター内蔵アウトドアナイフ。
+					</p>
 
-					</header>
-
-				</article>
+				</section>
 
 			</div>
 
